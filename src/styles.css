@@ -1,1 +1,460 @@
-/* You can add global styles to this file, and also import other style files */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafc;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4f46e5;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  nav ul li a:hover {
+    color: #4f46e5;
+  }
+  
+  /* Section Styles */
+  .section {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+  
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  h2 {
+    color: #4f46e5;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-list, .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .project-card, .skill-card {
+    flex: 1 1 calc(33.333% - 1rem);
+    background: #f3f4f6;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .project-card:hover, .skill-card:hover {
+    background: #e0e7ff;
+    color: #4f46e5;
+  }
+  
+  .contact-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-links a {
+    color: #4f46e5;
+    text-decoration: none;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #f3f4f6;
+    margin-top: 2rem;
+  }
+
+  /* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    background: #f3f4f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 1rem;
+  }
+  
+  .project-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #4f46e5;
+  }
+  
+  .project-content p {
+    font-size: 0.9rem;
+    color: #374151;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-stack {
+    font-size: 0.9rem;
+    padding-top: 2%;
+    color: #6b7280;
+  }
+  
+  .project-link {
+    display: inline-block;
+    background: #4f46e5;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background: #4338ca;
+  }
+  
+  /* Experience Section */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .experience-card {
+    background: #f3f4f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .company-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .experience-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #4f46e5;
+  }
+  
+  .location-duration {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+  
+  .experience-content p {
+    font-size: 0.9rem;
+    color: #374151;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tech-stack {
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+
+  /* Extracurriculars Section */
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .org-card {
+    background: #f3f4f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .org-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .org-image {
+    width: 25%;
+    height: 25%;
+    object-fit: contain;
+    align-self: center;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .org-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #4f46e5;
+  }
+  
+  .org-content p {
+    font-size: 0.9rem;
+    color: #374151;
+    margin-bottom: 1rem;
+  }
+
+  .org-content li {
+    font-size: 0.9rem;
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 0.5rem;
+  }  
+  
+  .org-projects h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #6b7280;
+  }
+  
+  .org-projects ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #4b5563;
+  }
+  
+  .org-projects li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }  
+
+/* Education Section */
+  
+  .education-info h3 {
+    font-size: 1.8rem;
+    color: #4f46e5;
+    margin-bottom: 0.5rem;
+  }
+  
+  .education-info p {
+    font-size: 1rem;
+    color: #374151;
+    margin-top: 0.5rem;
+  }
+
+  .education-section {
+    margin-bottom: 2rem;
+  }
+  
+  .education-entry {
+    display: flex;
+    align-items: flex-start; /* Align logo and text at the top */
+    gap: 1rem; /* Space between logo and text */
+    margin-bottom: 2rem;
+  }
+  
+  .school-logo {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+  
+  .education-content {
+    flex: 1; /* Allow text to take up remaining space */
+  }
+  
+  .coursework-list {
+    list-style-type: disc;
+    margin: 0.5rem 0 0 1.5rem; /* Indent bullets slightly */
+  }
+  
+  
+  .coursework h4 {
+    font-size: 1.5rem;
+    color: #4f46e5;
+    margin-bottom: 1rem;
+  }
+  
+  .coursework p {
+    font-size: 1rem;
+    color: #6b7280;
+  }
+  
+  .course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .course-item h5 {
+    font-size: 1.2rem;
+    color: #4f46e5;
+  }
+  
+  .course-item p {
+    font-size: 1rem;
+    color: #6b7280;
+  }
+  
+  .ta-experience h4, .research-lab h4 {
+    font-size: 1.5rem;
+    color: #4f46e5;
+  }
+  
+  .ta-experience p, .research-lab p {
+    font-size: 1rem;
+    color: #374151;
+  }
+  
+  .ta-details, .research-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-top: 1%;
+  }
+  
+  .ta-responsibilities, .research-contribution {
+    width: 45%;
+  }
+  
+  .ta-responsibilities ul, .research-contribution ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #4b5563;
+  }
+  
+  .ta-tech, .research-tech {
+    width: 45%;
+  }
+  
+  .ta-tech ul, .research-tech ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #4b5563;
+  }
+
+  .coursework, .ta-experience, .research-lab {
+    margin-bottom: 1.5rem;
+  }
+  
+  .coursework ul, .ta-experience ul, .research-lab ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #4b5563;
+  }
+  
+  .coursework-columns {
+    display: flex;
+    gap: 10%;
+  }
+  
+  .coursework-columns ul {
+    padding-left: 1%;
+  }
+  
+  .coursework-columns li {
+    margin-bottom: 0.5rem; 
+  }
+  
+  
+  .about-section {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .hobby-icons {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 2rem;           
+    margin-top: 1rem;
+  }
+  
+  .hobby-icon {
+    display: flex;
+    color: #6b705c; 
+    flex-direction: column;  
+    align-items: center;    
+    text-align: center;     
+  }
+  
+  .hobby-icon fa-icon {
+    font-size: 2.5rem;       
+    color: #4f46e5;        
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  
+  
+  
