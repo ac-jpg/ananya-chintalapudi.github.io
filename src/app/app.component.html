@@ -12,18 +12,20 @@
   <header>
     <div class="header-container">
       <div class="logo">Ananya Chintalapudi</div>
-      <nav>
+      <div class="menu-toggle" (click)="toggleMenu()">&#9776;</div>
+      <nav [class.show]="menuOpen">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#extracurriculars">Extracurriculars</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" (click)="closeMenu()">About</a></li>
+          <li><a href="#education" (click)="closeMenu()">Education</a></li>
+          <li><a href="#extracurriculars" (click)="closeMenu()">Extracurriculars</a></li>
+          <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
+          <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+          <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
+  
 
   <main>
     <!-- About Section -->

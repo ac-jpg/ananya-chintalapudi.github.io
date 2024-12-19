@@ -26,6 +26,16 @@ export class AppComponent {
     
   }
 
+  menuOpen = false;
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu(): void {
+    this.menuOpen = false;
+  }
+
   faMountain = faMountain;
   faCar = faCar;
   faCoffee = faCoffee;
